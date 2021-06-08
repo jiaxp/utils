@@ -9,11 +9,22 @@ npm install utils-cs --save
 ```
 
 ### Use
+
 ``` bash
-import { print } from 'utils-cs'
+1.全部引入
+  import Utils from 'utils-cs'
+  Vue.use(Utils,{
+    rootMethods:['print'], // 挂在到Vue根部
+    appName: process.env.VUE_APP_NAME // 项目的域名
+  })
+  使用：this.$utils
+  
+2.按需引入
+  import { print } from 'utils-cs'
 ```
 
 ### Props
+
 ``` bash
 1.defaultValue (val, defaultVal)  缺省补全
 Params
@@ -71,4 +82,14 @@ Params
 10.getRouteNameByMenuAuth 把菜单的权限标识转换成路由name
 Params
   auth【String】
+  
+11.isSameStr 判断两个字符串/数字是相同的字符串
+Params
+  val1【String/Number】
+  val2【String/Number】
+  
+12.getToken setToken removeToken
+
+13.setLocalStorage getLocalStorage removeLocalStorage setSessionStorage getSessionStorage removeSessionStorage
+
 ```
