@@ -92,5 +92,10 @@ Params
 
 13.setLocalStorage(name, Object) getLocalStorage(name) removeLocalStorage(name) 
    setSessionStorage(name, Object) getSessionStorage(name) removeSessionStorage(name)
+   
+14.getUrlQuery(key, path)
+Params
+  key【String】参数key
+  path【String】外部输入的url，不传则默认获取window.location.href
 
 ```
