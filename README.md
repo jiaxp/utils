@@ -1,6 +1,6 @@
 # utils
 
-> 通用方法库
+> 服务云-通用方法库
 
 ### Install
 
@@ -14,7 +14,7 @@ npm install utils-cs --save
 1.全部引入
   import Utils from 'utils-cs'
   Vue.use(Utils,{
-    rootMethods:['print'], // 挂在到Vue根部
+    rootMethods:['print'], // 需要挂载到到Vue根下的方法
     appName: process.env.VUE_APP_NAME // 项目的域名
   })
   使用：this.$utils
@@ -26,47 +26,47 @@ npm install utils-cs --save
 ### Props
 
 ``` bash
-1.defaultValue (val, defaultVal)  缺省补全
+1.defaultValue(val, defaultVal)  缺省补全
 Params
   val【String】值
   defaultVal【String】【默认值：无】默认缺省值
 
-2.getUUID  获取uuid
+2.getUUID(len)  获取uuid
 Params
-  len【Number】【默认值：32】
+  len【Number】【默认值：32】生成uuid的长度
 
-3.toPrice  转换成金额格式
+3.toPrice(money, floatNumber)  转换成金额格式
 Params
   money【String】金额
   floatNumber【Number】【默认值：2】小数点位数
 
-4.resetObject 对象赋值
+4.resetObject(targetObj, sourceObj, isdefault, defaultVal) 对象赋值
 Params
   targetObj【Object】目标对象
   sourceObj【Object】源对象
   isdefault【Boolean】是否追加默认值
   defaultVal【默认值：‘’】
 
-5.dateFormatter 日期格式化
+5.dateFormatter(date, fmt) 日期格式化
 Params
   date【Date】日期
   fmt【String】格式化串
 
-6.getObjectType 获取数据类型
+6.getObjectType(obj) 获取数据类型
 
-7.timeDiff 时间差
+7.timeDiff(startTime, endTime) 时间差
 Params
   startTime【Date】开始时间
   endTime【Date】结束时间
 
-8.getFileType 文件类型
+8.getFileType(path) 文件类型
 Params
   path【String】文件path或者文件名称
 
 Return
 excel/word/pdf/ppt/image/video/audio
 
-9.print 打印
+9.print(ele, opts) 打印
 Params
   ele【Dom】打印区域dom对象
   opts【Object】打印参数
@@ -79,17 +79,18 @@ Params
     beforePrint【Function】：打印-before
     afterPrint【Function】：打印-after
     
-10.getRouteNameByMenuAuth 把菜单的权限标识转换成路由name
+10.getRouteNameByMenuAuth(auth) 把菜单的权限标识转换成路由name
 Params
   auth【String】
   
-11.isSameStr 判断两个字符串/数字是相同的字符串
+11.isSameStr(val1, val2) 判断两个字符串/数字是相同的字符串
 Params
   val1【String/Number】
   val2【String/Number】
   
 12.getToken setToken removeToken
 
-13.setLocalStorage getLocalStorage removeLocalStorage setSessionStorage getSessionStorage removeSessionStorage
+13.setLocalStorage(name, Object) getLocalStorage(name) removeLocalStorage(name) 
+   setSessionStorage(name, Object) getSessionStorage(name) removeSessionStorage(name)
 
 ```
