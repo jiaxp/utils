@@ -93,10 +93,10 @@ npm install utils-cs --save
 13.setLocalStorage(name, Object) getLocalStorage(name) removeLocalStorage(name) 
    setSessionStorage(name, Object) getSessionStorage(name) removeSessionStorage(name)
    
-14.getUrlQuery(key, path) 获取url中的参数
+14.getUrlQuery(path, key) 获取url中的参数
 【Params】
-  key【String】参数key
   path【String】外部输入的url，不传则默认获取window.location.href
+  key【String】参数key
   
 15.getVersionInfo() 获取版本信息
 
