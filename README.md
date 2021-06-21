@@ -15,7 +15,7 @@ npm install utils-cs --save
   import Utils from 'utils-cs'
   Vue.use(Utils,{
     rootMethods:['print'], // 需要挂载到到Vue根下的方法
-    appName: process.env.VUE_APP_NAME, // 项目的域名
+    namespace: process.env.VUE_APP_NAME, // 命名空间名称
     tokenKey: 'tokenKey' // token的key值，非必填【默认值：AuthAPIToken】
   })
   使用：this.$utils
