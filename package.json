@@ -1,7 +1,7 @@
 {
   "name": "utils-cs",
   "description": "服务云-通用方法库",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "author": "贾晓朋 <jiaxp3@lenovo.com>",
   "license": "MIT",
   "private": false,
