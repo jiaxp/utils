@@ -16,7 +16,8 @@ npm install utils-cs --save
   Vue.use(Utils,{
     rootMethods:['print'], // 需要挂载到到Vue根下的方法
     namespace: process.env.VUE_APP_NAME, // 命名空间名称
-    tokenKey: 'tokenKey' // token的key值，非必填【默认值：AuthAPIToken】
+    tokenKey: 'tokenKey', // token的key值，非必填【默认值：AuthAPIToken】
+    router: router // 路由对象
   })
   使用：this.$utils
   
