@@ -8,7 +8,7 @@
 npm install utils-cs --save
 ```
 
-### Use
+### Usage
 
 ``` bash
 1.全部引入
